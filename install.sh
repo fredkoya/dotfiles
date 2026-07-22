@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+ROOT="$(cd "$(dirname "$0")" && pwd)"
 CURL=/usr/bin/curl
 
 if [[ ! -x /opt/homebrew/bin/brew ]]; then
@@ -31,4 +32,9 @@ fi
 
 if ! command -v mise >/dev/null 2>&1; then
   brew install mise
+fi
+
+if [[ -f "$ROOT/mise.toml" ]]; then
+  mise -C "$ROOT" trust
+  mise -C "$ROOT" bootstrap --yes
 fi
