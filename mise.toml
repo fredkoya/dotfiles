@@ -1,0 +1,9 @@
+min_version = { hard = "2026.7.7" }
+
+[settings]
+dotfiles.root = "~/.dotfiles"
+dotfiles.default_mode = "symlink"
+
+[bootstrap.packages]
+"brew:git" = "latest"
+"brew:mise" = "latest"
