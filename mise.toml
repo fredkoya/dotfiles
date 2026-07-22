@@ -7,3 +7,6 @@ dotfiles.default_mode = "symlink"
 [bootstrap.packages]
 "brew:git" = "latest"
 "brew:mise" = "latest"
+
+[dotfiles]
+"~/.config/mise/config.toml" = { source = "packages/mise/config.toml", mode = "symlink" }
