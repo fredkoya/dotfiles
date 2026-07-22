@@ -23,3 +23,8 @@ if [[ -x "$prefix/opt/curl/bin/curl" ]]; then
     brew install openldap || true
   fi
 fi
+
+ZPREZTO="${ZDOTDIR:-$HOME}/.zprezto"
+if [[ ! -d "$ZPREZTO/.git" ]]; then
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "$ZPREZTO"
+fi
