@@ -28,3 +28,7 @@ ZPREZTO="${ZDOTDIR:-$HOME}/.zprezto"
 if [[ ! -d "$ZPREZTO/.git" ]]; then
   git clone --recursive https://github.com/sorin-ionescu/prezto.git "$ZPREZTO"
 fi
+
+if ! command -v mise >/dev/null 2>&1; then
+  brew install mise
+fi
