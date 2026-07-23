@@ -5,6 +5,7 @@ dotfiles.root = "~/.dotfiles"
 dotfiles.default_mode = "symlink"
 
 [bootstrap.packages]
+"brew:coreutils" = "latest"
 "brew:git" = "latest"
 "brew:mise" = "latest"
 
