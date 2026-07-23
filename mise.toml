@@ -21,6 +21,8 @@ dotfiles.default_mode = "symlink"
 "brew:libheif" = "latest"
 "brew:mise" = "latest"
 "brew:tig" = "latest"
+"brew:zsh-autosuggestions" = "latest"
+"brew:zsh-completions" = "latest"
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "packages/mise/config.toml", mode = "symlink" }
