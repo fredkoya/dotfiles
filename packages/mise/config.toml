@@ -5,6 +5,8 @@ aws-cli = "latest"
 claude-code = "latest"
 gh = "latest"
 go = "1.26"
+pnpm = "11"
+node = "24"
 python = "3.14"
 uv = "0.11"
 
