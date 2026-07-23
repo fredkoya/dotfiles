@@ -5,8 +5,24 @@ dotfiles.root = "~/.dotfiles"
 dotfiles.default_mode = "symlink"
 
 [bootstrap.packages]
+"brew:colima" = "latest"
+"brew:coreutils" = "latest"
+"brew:docker" = "latest"
+"brew:docker-buildx" = "latest"
+"brew:docker-compose" = "latest"
+"brew:eza" = "latest"
+"brew:gibo" = "latest"
 "brew:git" = "latest"
+"brew:gnu-sed" = "latest"
+"brew:gnupg" = "latest"
+"brew:gnutls" = "latest"
+"brew:imagemagick" = "latest"
+"brew:iperf3" = "latest"
+"brew:libheif" = "latest"
 "brew:mise" = "latest"
+"brew:tig" = "latest"
+"brew:zsh-autosuggestions" = "latest"
+"brew:zsh-completions" = "latest"
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "packages/mise/config.toml", mode = "symlink" }

@@ -4,6 +4,9 @@ min_version = { soft = "2026.7.7" }
 aws-cli = "latest"
 claude-code = "latest"
 gh = "latest"
+go = "1.26"
+python = "3.14"
+uv = "0.11"
 
 [settings]
 plugin_autoupdate_last_check_duration = "10080" # 7 days
