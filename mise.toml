@@ -15,6 +15,7 @@ dotfiles.default_mode = "symlink"
 "brew:git" = "latest"
 "brew:gnu-sed" = "latest"
 "brew:gnupg" = "latest"
+"brew:gnutls" = "latest"
 "brew:mise" = "latest"
 
 [dotfiles]
