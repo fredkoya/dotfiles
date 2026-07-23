@@ -18,6 +18,7 @@ dotfiles.default_mode = "symlink"
 "brew:gnutls" = "latest"
 "brew:imagemagick" = "latest"
 "brew:iperf3" = "latest"
+"brew:libheif" = "latest"
 "brew:mise" = "latest"
 
 [dotfiles]
