@@ -10,6 +10,7 @@ dotfiles.default_mode = "symlink"
 "brew:docker" = "latest"
 "brew:docker-buildx" = "latest"
 "brew:docker-compose" = "latest"
+"brew:eza" = "latest"
 "brew:git" = "latest"
 "brew:mise" = "latest"
 
