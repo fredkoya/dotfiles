@@ -20,6 +20,7 @@ dotfiles.default_mode = "symlink"
 "brew:iperf3" = "latest"
 "brew:libheif" = "latest"
 "brew:mise" = "latest"
+"brew:tig" = "latest"
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "packages/mise/config.toml", mode = "symlink" }
