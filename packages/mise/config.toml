@@ -9,4 +9,4 @@ python = "3.14"
 uv = "0.11"
 
 [settings]
-plugin_autoupdate_last_check_duration = "10080" # 7 days
+plugin_autoupdate_last_check_duration = "4320" # 3 days
