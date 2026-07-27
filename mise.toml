@@ -7,6 +7,7 @@ dotfiles.default_mode = "symlink"
 [bootstrap.packages]
 "brew:colima" = "latest"
 "brew:coreutils" = "latest"
+"brew:curl" = "latest"
 "brew:docker" = "latest"
 "brew:docker-buildx" = "latest"
 "brew:docker-compose" = "latest"
@@ -37,3 +38,7 @@ dotfiles.default_mode = "symlink"
 # packages/vscode
 "~/Library/Application Support/Code/User/settings.json" = { source = "packages/vscode/settings.json", mode = "symlink" }
 "~/Library/Application Support/Code/User/keybindings.json" = { source = "packages/vscode/keybindings.json", mode = "symlink" }
+
+# packages/zsh
+"~/.zshrc" = { source = "packages/zsh/.zshrc", mode = "symlink" }
+"~/.zpreztorc" = { source = "packages/zsh/.zpreztorc", mode = "symlink" }
