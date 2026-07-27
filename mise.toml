@@ -26,3 +26,6 @@ dotfiles.default_mode = "symlink"
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "packages/mise/config.toml", mode = "symlink" }
+
+# packages/claude
+"~/.claude/CLAUDE.md" = { source = "packages/claude/CLAUDE.md", mode = "symlink" }
