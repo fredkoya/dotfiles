@@ -1,0 +1,71 @@
+name: "Feature Child Task"
+description: "feature の子タスクを作成する"
+title: "[Feature Task] "
+labels:
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        親タスク配下で実施する具体的な作業単位を定義するテンプレートです。
+  - type: input
+    id: parent-issue
+    attributes:
+      label: 親タスク
+      description: 親 Issue 番号またはリンクを記載してください。
+      placeholder: "例: #123"
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: 目的
+      description: この子タスクで解決したいことを記載してください。
+      placeholder: |
+        例:
+        - API に検索条件を追加する
+        - UI に新しい入力フォームを追加する
+    validations:
+      required: true
+  - type: textarea
+    id: work
+    attributes:
+      label: 実装内容
+      description: 作業内容を箇条書きで記載してください。
+      placeholder: |
+        例:
+        - [ ] エンドポイントを追加する
+        - [ ] バリデーションを実装する
+        - [ ] テストを追加する
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 完了条件
+      description: この子タスクが完了したと判断する条件を記載してください。
+      placeholder: |
+        例:
+        - [ ] 仕様どおりに動作する
+        - [ ] 既存機能へ影響がない
+        - [ ] 必要なテストが通る
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 依存関係・ブロッカー
+      description: 依存する Issue や事前条件があれば記載してください。
+      placeholder: |
+        例:
+        - depends on: #124
+        - API 仕様確定待ち
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: 備考
+      description: 補足、参考リンク、注意点などがあれば記載してください。
+    validations:
+      required: false

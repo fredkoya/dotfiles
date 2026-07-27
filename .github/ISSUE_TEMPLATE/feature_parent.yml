@@ -1,0 +1,79 @@
+name: "Feature Parent Task"
+description: "feature の親タスクを作成する"
+title: "[Feature] "
+labels:
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        feature の全体像と完了条件を整理するための親タスクです。
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景
+      description: なぜこの feature が必要かを記載してください。
+      placeholder: |
+        例:
+        - ユーザーからの要望
+        - 現在の課題
+        - 関連する仕様変更
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 目的
+      description: この feature で達成したい状態を記載してください。
+      placeholder: |
+        例:
+        - ユーザーが〇〇できるようになる
+        - 運用コストを下げる
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: スコープ
+      description: 対応範囲と、必要なら非対応範囲も記載してください。
+      placeholder: |
+        例:
+        - 対応: API / UI / バッチ
+        - 非対応: 既存データ移行
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: 完了条件
+      description: feature 完了と判断する条件を列挙してください。
+      placeholder: |
+        例:
+        - [ ] API が本番想定の条件で動作する
+        - [ ] UI から一連の操作が行える
+        - [ ] 必要なテストが追加されている
+    validations:
+      required: true
+  - type: textarea
+    id: child-tasks
+    attributes:
+      label: 子タスク
+      description: 分解した子タスクをチェックリストで記載してください。
+      placeholder: |
+        例:
+        - [ ] API 実装
+        - [ ] UI 実装
+        - [ ] テスト追加
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: 備考
+      description: 参考情報、関連 Issue、設計メモなどがあれば記載してください。
+      placeholder: |
+        例:
+        - related: #123
+        - design doc: ...
+    validations:
+      required: false
