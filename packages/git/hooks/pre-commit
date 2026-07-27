@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#
+# Global pre-commit hook: block secrets from being committed in any repo.
+# Installed via core.hooksPath (see packages/git/config).
+#
+set -euo pipefail
+
+# Resolve gitleaks: prefer PATH, fall back to a mise shim.
+if command -v gitleaks >/dev/null 2>&1; then
+  GITLEAKS=gitleaks
+elif [[ -x "$HOME/.local/share/mise/shims/gitleaks" ]]; then
+  GITLEAKS="$HOME/.local/share/mise/shims/gitleaks"
+else
+  echo "pre-commit: gitleaks not found; skipping secret scan." >&2
+  echo "            install it with: mise install gitleaks" >&2
+  exit 0
+fi
+
+# Scan only staged changes. --redact hides matched secrets from the output.
+exec "$GITLEAKS" git --staged --redact --no-banner

@@ -2,6 +2,7 @@
 	editor = vi
 	ignorecase = false
 	precomposeunicode = true
+	hooksPath = ~/.config/git/hooks
 [delta]
 	light = false
 	navigate = true
