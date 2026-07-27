@@ -1,0 +1,31 @@
+[core]
+	editor = vi
+	ignorecase = false
+	precomposeunicode = true
+[delta]
+	light = false
+	navigate = true
+	side-by-side = true
+	syntax-theme = OneHalfDark
+[diff]
+	colorMoved = default
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[fetch]
+	prune = true
+[include]
+	path = config.local
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictstyle = diff3
+[pager]
+	difftool = false
+[rebase]
+	autostash = true
+[user]
+	useConfigOnly = true
