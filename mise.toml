@@ -29,3 +29,7 @@ dotfiles.default_mode = "symlink"
 
 # packages/claude
 "~/.claude/CLAUDE.md" = { source = "packages/claude/CLAUDE.md", mode = "symlink" }
+
+# packages/git
+"~/.config/git/config" = { source = "packages/git/config", mode = "symlink" }
+"~/.config/git/ignore" = { source = "packages/git/ignore", mode = "symlink" }
