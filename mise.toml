@@ -30,6 +30,7 @@ dotfiles.default_mode = "symlink"
 
 # packages/claude
 "~/.claude/CLAUDE.md" = { source = "packages/claude/CLAUDE.md", mode = "symlink" }
+"~/.claude/settings.json" = { source = "packages/claude/settings.json", mode = "symlink" }
 
 # packages/git
 "~/.config/git/config" = { source = "packages/git/config", mode = "symlink" }
