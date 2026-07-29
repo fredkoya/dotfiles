@@ -24,6 +24,8 @@ dotfiles.default_mode = "symlink"
 "brew:tig" = "latest"
 "brew:zsh-autosuggestions" = "latest"
 "brew:zsh-completions" = "latest"
+"brew-cask:google-chrome" = "latest"
+"brew-cask:thebrowsercompany-dia" = "latest"
 
 [dotfiles]
 "~/.config/mise/config.toml" = { source = "packages/mise/config.toml", mode = "symlink" }

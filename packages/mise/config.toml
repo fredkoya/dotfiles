@@ -20,3 +20,5 @@ tlrc = "latest"
 
 [settings]
 plugin_autoupdate_last_check_duration = "4320" # 3 days
+# brew-cask downloads reuse this timeout, so large .app archives need well over the 20s default
+fetch_remote_versions_timeout = "10m"
