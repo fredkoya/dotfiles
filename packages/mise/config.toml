@@ -15,7 +15,7 @@ pnpm = "11"
 node = "24"
 python = "3.14"
 ripgrep = "latest"
-uv = "0.11"
+uv = "0.12"
 tlrc = "latest"
 
 [settings]
