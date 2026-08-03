@@ -1,4 +1,8 @@
 {
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "env": {
     "CLAUDE_CODE_USE_BEDROCK": "1",
     "AWS_REGION": "ap-northeast-1",
@@ -8,9 +12,22 @@
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "global.anthropic.claude-opus-5",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "global.anthropic.claude-opus-5"
   },
-  "attribution": {
-    "commit": "",
-    "pr": ""
+  "permissions": {
+    "allow": [
+      "Bash(gh auth *)",
+      "Bash(gh pr *)",
+      "Bash(git add *)",
+      "Bash(git branch *)",
+      "Bash(git check-ignore *)",
+      "Bash(git checkout *)",
+      "Bash(git commit *)",
+      "Bash(git fetch *)",
+      "Bash(git mv *)",
+      "Bash(git pull *)",
+      "Bash(git push *)",
+      "Bash(git show *)",
+      "Bash(git switch *)"
+    ]
   },
   "theme": "dark"
 }
