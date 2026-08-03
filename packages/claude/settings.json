@@ -12,5 +12,18 @@
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "global.anthropic.claude-opus-5",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "global.anthropic.claude-opus-5"
   },
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git branch *)",
+      "Bash(git checkout *)",
+      "Bash(git commit *)",
+      "Bash(git mv *)",
+      "Bash(git pull *)",
+      "Bash(git push *)",
+      "Bash(git show *)",
+      "Bash(git switch *)"
+    ]
+  },
   "theme": "dark"
 }
