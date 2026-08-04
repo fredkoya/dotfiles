@@ -12,7 +12,15 @@ make install
 
 `make install` は Homebrew / prezto / mise を用意したうえで `mise bootstrap` を実行し、`mise.toml` の定義に従ってツールのインストールとシンボリックリンクの作成まで行う。
 
-2 回目以降の適用は `make mise` を使う。mise 自体の最小バージョンを満たしているか確認してから `mise bootstrap` を実行する。
+## 設定変更の反映
+
+`mise.toml` を変更したあとは `make mise` で再適用する。
+
+```
+make mise
+```
+
+`make install` との違いは、Homebrew や prezto のセットアップを行わず、mise が最小バージョン（`Makefile` の `MISE_MIN_VERSION`）を満たしているか確認したうえで `mise bootstrap` のみを実行する点。満たしていなければ Homebrew 経由で mise を更新する。
 
 ## 構成
 
