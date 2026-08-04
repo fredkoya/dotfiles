@@ -20,6 +20,8 @@
 	prune = true
 [gpg]
 	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
 [include]
 	path = config.local
 [init]
@@ -33,4 +35,5 @@
 [rebase]
 	autostash = true
 [user]
+	signingkey = ~/.ssh/id_ed25519_signing.pub
 	useConfigOnly = true
