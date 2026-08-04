@@ -1,3 +1,5 @@
+[commit]
+	gpgsign = true
 [core]
 	editor = vi
 	ignorecase = false
@@ -16,6 +18,8 @@
 	cmd = difft "$LOCAL" "$REMOTE"
 [fetch]
 	prune = true
+[gpg]
+	format = ssh
 [include]
 	path = config.local
 [init]
