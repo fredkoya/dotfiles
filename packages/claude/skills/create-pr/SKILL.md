@@ -44,22 +44,55 @@ ls .github/ | grep -i pull_request
 - 未対応の懸念事項は「注意事項」に明記する
 - 複数 repo にまたがる変更では、関連 PR の番号を相互リンクし、リリース順序を書く。片方だけ先に反映しても既存表示が壊れないことを明示する
 
-## 4. 送信後に必ず照合する
+## 4. push 前に履歴を確認する
+
+**public リポジトリでは push が取り消せない公開行為になる。** ブランチ全体の履歴を、そのリポジトリと無関係な情報が入っていないか確認する。
+
+途中のコミットで追加して後のコミットで削除したファイルは、**削除しても履歴には残る**。ワーキングツリーを見るだけでは足りない。
+
+```bash
+gh repo view --json isPrivate -q .isPrivate      # public なら特に念入りに
+git ls-remote --heads origin <branch>            # 空なら未 push（今なら作り直せる）
+git log -p <default-branch>..HEAD | grep -icE '<他プロジェクト固有の語>'
+```
+
+混入していて未 push なら、`git reset --soft <混入コミットの親>` で作り直してから push する。既に push 済みなら、その事実と影響範囲をユーザーに報告して判断を仰ぐ。
+
+## 5. 送信後に必ず照合する
 
 `gh pr create` の終了コードだけを完了判定にしない。ヒアドキュメントを含む複合コマンドは、リダイレクトが失敗しても後続が走る。
 
+目視で確認しない。機械的に照合する。
+
 ```bash
-gh pr view <番号> --json body -q .body
+B=.git/pr_body_<branch-name>.md
+gh pr view <番号> --json body -q .body > "$B.remote"
+
+# コマンド置換が末尾改行を落とすため、GitHub 側が付与する末尾空行を無視して比較できる
+if [ "$(cat "$B.remote")" = "$(cat "$B")" ]; then
+  echo "✔ 一致"
+else
+  echo "✘ 差異あり"
+  diff "$B.remote" "$B"
+fi
 ```
 
-出力が意図した内容と一致することを目で確認する。差異があれば `gh pr edit <番号> --body-file <ファイル>` で直し、もう一度照合する。
+**既知の差分：** GitHub は body の末尾に空行を 1 つ付与する。素の `diff` は必ず末尾 1 行の差分（`Nd(N-1) < `）を報告するので、これを実際の不一致と誤認しない。上の `$(cat ...)` による比較はこの差分を吸収する。
+
+意図しない差異があれば `gh pr edit <番号> --body-file "$B"` で直し、もう一度照合する。
+
+送信された本文に、そのリポジトリと無関係な情報が混入していないかも確認する。public リポジトリなら特に念入りに。
+
+```bash
+grep -icE '<他プロジェクト固有の語>' "$B.remote"
+```
 
 照合まで終わってから「PR を作成しました」と報告する。照合していない状態で完了扱いにしない。
 
-## 5. 後片付け
+## 6. 後片付け
 
 ```bash
-rm -f .git/pr_body_<branch-name>.md
+rm -f .git/pr_body_<branch-name>.md .git/pr_body_<branch-name>.md.remote
 ```
 
 マージ後にブランチを消すときは `-D` ではなく `-d` を使い、マージ済みであることを確認してから消す。
