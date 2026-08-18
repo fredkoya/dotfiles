@@ -29,5 +29,8 @@
       "Bash(git switch *)"
     ]
   },
-  "theme": "dark"
+  "theme": "dark",
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  }
 }
