@@ -163,5 +163,6 @@
     "workbench.editor.enablePreview": false,
     "claudeCode.preferredLocation": "panel",
     "terminal.integrated.mouseWheelScrollSensitivity": 3,
-    "terminal.integrated.gpuAcceleration": "off"
+    "terminal.integrated.gpuAcceleration": "off",
+    "editor.unicodeHighlight.ambiguousCharacters": false
 }
