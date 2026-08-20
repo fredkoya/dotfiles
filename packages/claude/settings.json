@@ -14,20 +14,44 @@
   },
   "permissions": {
     "allow": [
+      "Bash(aws --version)",
+      "Bash(aws sts *)",
+      "Bash(brew info *)",
+      "Bash(brew list *)",
+      "Bash(colima list *)",
+      "Bash(colima start *)",
+      "Bash(colima status *)",
+      "Bash(colima stop *)",
+      "Bash(command -v *)",
+      "Bash(dig *)",
+      "Bash(docker info *)",
+      "Bash(docker stats *)",
+      "Bash(docker version *)",
+      "Bash(echo *)",
+      "Bash(gh api *)",
       "Bash(gh auth *)",
       "Bash(gh pr *)",
+      "Bash(gh repo *)",
+      "Bash(gh run *)",
+      "Bash(gh variable *)",
       "Bash(git add *)",
       "Bash(git branch *)",
       "Bash(git check-ignore *)",
       "Bash(git checkout *)",
       "Bash(git commit *)",
       "Bash(git fetch *)",
+      "Bash(git log *)",
       "Bash(git mv *)",
       "Bash(git pull *)",
       "Bash(git push *)",
       "Bash(git show *)",
-      "Bash(git switch *)"
+      "Bash(git switch *)",
+      "Bash(mise which *)",
+      "Bash(uv --version)"
     ]
   },
-  "theme": "dark"
+  "theme": "dark",
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  }
 }
