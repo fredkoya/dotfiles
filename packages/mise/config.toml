@@ -1,4 +1,4 @@
-min_version = { soft = "2026.7.7" }
+min_version = { soft = "2026.8.10" }
 
 [tools]
 aws-cli = "latest"
@@ -10,7 +10,7 @@ difftastic = "latest"
 fd = "latest"
 gh = "latest"
 gitleaks = "latest"
-go = "1.26"
+go = "1.27"
 heroku-cli = "latest"
 peco = "latest"
 pnpm = "11"
