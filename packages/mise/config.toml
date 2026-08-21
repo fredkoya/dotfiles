@@ -4,6 +4,7 @@ min_version = { soft = "2026.7.7" }
 aws-cli = "latest"
 bat = "latest"
 claude-code = "latest"
+codex = "latest"
 delta = "latest"
 difftastic = "latest"
 fd = "latest"

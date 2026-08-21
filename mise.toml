@@ -35,6 +35,9 @@ dotfiles.default_mode = "symlink"
 "~/.claude/settings.json" = { source = "packages/claude/settings.json", mode = "symlink" }
 "~/.claude/skills/create-pr/SKILL.md" = { source = "packages/claude/skills/create-pr/SKILL.md", mode = "symlink" }
 
+# packages/codex
+"~/.codex/AGENTS.md" = { source = "packages/codex/AGENTS.md", mode = "symlink" }
+
 # packages/git
 "~/.config/git/config" = { source = "packages/git/config", mode = "symlink" }
 "~/.config/git/ignore" = { source = "packages/git/ignore", mode = "symlink" }
