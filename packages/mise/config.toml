@@ -15,9 +15,9 @@ heroku-cli = "latest"
 peco = "latest"
 pnpm = "11"
 node = "24"
-python = "3.14"
+python = "3.15"
 ripgrep = "latest"
-uv = "0.12"
+uv = "0.13"
 tlrc = "latest"
 
 [settings]
