@@ -1,4 +1,4 @@
-min_version = { soft = "2026.8.10" }
+min_version = { soft = "2026.11.5" }
 
 [tools]
 aws-cli = "latest"
