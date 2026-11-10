@@ -3,7 +3,7 @@ install:
 	@sudo true
 	./install.sh
 
-MISE_MIN_VERSION := 2026.7.7
+MISE_MIN_VERSION := 2026.11.5
 
 .PHONY: mise-gate
 mise-gate:

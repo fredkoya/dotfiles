@@ -1,4 +1,4 @@
-min_version = { soft = "2026.8.10" }
+min_version = { soft = "2026.11.5" }
 
 [tools]
 aws-cli = "latest"
@@ -13,14 +13,13 @@ gitleaks = "latest"
 go = "1.27"
 heroku-cli = "latest"
 peco = "latest"
-pnpm = "11"
-node = "24"
+pnpm = "12"
+node = "26"
 python = "3.15"
 ripgrep = "latest"
 uv = "0.13"
 tlrc = "latest"
 
 [settings]
-plugin_autoupdate_last_check_duration = "4320" # 3 days
 # brew-cask downloads reuse this timeout, so large .app archives need well over the 20s default
 fetch_remote_versions_timeout = "10m"
