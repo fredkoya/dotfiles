@@ -4,7 +4,7 @@ macOS 用の個人設定ファイル群。[mise](https://mise.jdx.dev/) の `[do
 
 ## セットアップ
 
-```
+```bash
 git clone https://github.com/fredkoya/dotfiles.git
 cd dotfiles
 make install
@@ -16,7 +16,7 @@ make install
 
 `mise.toml` を変更したあとは `make mise` で再適用する。
 
-```
+```bash
 make mise
 ```
 
@@ -40,7 +40,7 @@ Codex の MCP サーバーは `mise.toml` の `[tasks.bootstrap]` で管理す�
 
 MCP の登録だけを再実行する場合は、Codex がインストールされた状態で以下を実行する。
 
-```
+```bash
 mise run bootstrap
 codex mcp list
 ```
@@ -59,7 +59,7 @@ Codex CLI がユーザー設定（既定は `~/.codex/config.toml`）の対象�
 
 `packages/git/config` で SSH 署名を有効にしているため、署名鍵がないマシンではコミットが失敗する。新しいマシンでは以下を実施する。
 
-```
+```bash
 ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_signing
 gh ssh-key add ~/.ssh/id_ed25519_signing.pub --type signing --title "git signing"
 printf '%s %s\n' "$(git config user.email)" "$(cut -d' ' -f1,2 ~/.ssh/id_ed25519_signing.pub)" > ~/.config/git/allowed_signers
