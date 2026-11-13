@@ -36,16 +36,16 @@ make mise
 
 ## Codex MCP
 
-`mise.toml` の `[tasks.bootstrap]` で [Nuxt 公式 MCP](https://nuxt.com/docs/4.x/guide/ai/mcp)（`https://nuxt.com/mcp`）を登録する。`make install` / `make mise` のツール導入後に自動実行される。
+Codex の MCP サーバーは `mise.toml` の `[tasks.bootstrap]` で管理する。`make install` / `make mise` のツール導入後に自動登録される。登録対象や接続先の追加・変更は、このタスクに反映する。
 
 MCP の登録だけを再実行する場合は、Codex がインストールされた状態で以下を実行する。
 
 ```
 mise run bootstrap
-codex mcp get nuxt
+codex mcp list
 ```
 
-Codex CLI がユーザー設定（既定は `~/.codex/config.toml`）の `nuxt` エントリを追加・更新する。設定ファイル全体はリポジトリで配布せず、ほかの MCP やマシン固有の設定を保持する。同名の `nuxt` 設定があれば公式 URL に更新される。登録後は Codex を再起動して反映する。
+Codex CLI がユーザー設定（既定は `~/.codex/config.toml`）の対象エントリを追加・更新する。同名のサーバー設定はタスクの定義で更新され、それ以外の MCP やマシン固有の設定は保持される。登録後は Codex を再起動して反映する。
 
 ## マシン固有の設定
 
