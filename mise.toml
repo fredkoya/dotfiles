@@ -50,3 +50,10 @@ dotfiles.default_mode = "symlink"
 # packages/zsh
 "~/.zshrc" = { source = "packages/zsh/.zshrc", mode = "symlink" }
 "~/.zpreztorc" = { source = "packages/zsh/.zpreztorc", mode = "symlink" }
+
+[tasks.bootstrap]
+description = "Register Codex MCP servers"
+run = [
+  "codex mcp add nuxt --url https://nuxt.com/mcp",
+  "codex mcp add nuxt-ui --url https://ui.nuxt.com/mcp",
+]
